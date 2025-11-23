@@ -6,8 +6,8 @@ import os
 from openai import OpenAI
 
 # --- Load datasets ---
-trend_data = pd.read_csv("trend_data.csv")
-resale_data = pd.read_csv("hdb_resale_clean.csv")
+trend_data = pd.read_csv("data/trend_data.csv")
+resale_data = pd.read_csv("data/hdb_resale_clean.csv")
 
 # --- Initialize OpenAI client ---
 # Key is hidden from the public but still usable by your app
@@ -185,3 +185,4 @@ else:
 
         st.write("Henry says:")
         st.write(response.choices[0].message.content)
+
