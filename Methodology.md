@@ -8,8 +8,8 @@ Approach to Solving the Problem
 
 My approach was to treat this project as both a technical experiment and a personal learning journey. I broke the problem into smaller parts:  
 •	Login and access control to make the app professional.  
-•	Resale Trend chart to visualize data directly from trend_data.csv.  
-•	Price Estimator using regression logic and ChatGPT to project prices.  
+•	Resale Trend chart to visualize data directly from trend_data.csv. (Please refer to GitHub scripts on using Regression Model)  
+•	Price Estimator using regression logic and ChatGPT to project prices.  (Please refer to GitHub scripts on using predictions)  
 •	Henry the Assistant powered by RAG, carefully tuned to balance token usage with useful retrieval.  
 By combining these features, I ensured the app wasn’t just a chatbot — it became a full dashboard that demonstrates multiple AI concepts.
 
@@ -20,7 +20,8 @@ The workflow follows three main stages:
 2.	Retrieval: Instead of only reading 10 records, I expanded to 50 records when towns were identified. This gave the chatbot more context while still staying within token limits.  
 3.	Post retrieval summarization: Aggregate the data (averages, grouped by year or flat type) so the chatbot has concise, meaningful context to work with.  
 This balance — not too little data, not too much — was key to making RAG work smoothly.
-
+Please refer to GitHub scripts for efforts to Clean and trim dataset'.
+ 
 Addressing Prompt Injection
 
 I learned that prompt injection is a real risk when using AI. To safeguard against it, I kept the system prompts simple and focused: the assistant is only allowed to explain resale trends using the provided data. By grounding answers in trend_data.csv and hdb_resale_clean.csv, I reduced the chance of the chatbot being tricked into giving irrelevant or unsafe responses.
