@@ -25,9 +25,11 @@ Addressing Prompt Injection
 
 I learned that prompt injection is a real risk when using AI. To safeguard against it, I kept the system prompts simple and focused: the assistant is only allowed to explain resale trends using the provided data. By grounding answers in trend_data.csv and hdb_resale_clean.csv, I reduced the chance of the chatbot being tricked into giving irrelevant or unsafe responses.
 
-Hypothesis Testing & Validation
+Hypothesis Testing & Validation 
 
-My hypothesis was that increasing the retrieval size from 10 to 50 records, while aggregating data, would improve the chatbot’s usefulness without exceeding token limits. I tested this by asking questions about towns lower in the dataset. The results validated the approach: the chatbot could now recognize and respond to those towns, while still running efficiently.
+My hypothesis was that increasing the retrieval size from 10 to 50 records, combined with data aggregation, would improve the chatbot’s usefulness without exceeding token limits. I tested this by asking questions about towns lower in the dataset, but the results were still unsatisfactory — the chatbot struggled to recognize and respond to those towns.  
+
+To address this, I trimmed the dataset to just two towns, Bedok and Choa Chu Kang, covering 2020–2025 instead of the full 2017–2025 range. This made it easier for the AI to apply RAG effectively, pulling relevant information while staying within token limits. Previously, I often saw either 'no information available' with too few records or 'Error: Exceed Token Limit' with the larger dataset. By understanding these limitations, I’ve become more mindful about the dataset scope I use, ensuring the chatbot remains efficient and genuinely helpful."
 
 User Impact
 
