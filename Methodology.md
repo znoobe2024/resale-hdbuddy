@@ -32,6 +32,8 @@ My hypothesis was that increasing the retrieval size from 10 to 50 records, comb
 
 To address this, I trimmed the dataset to just two towns, Bedok and Choa Chu Kang, covering 2020–2025 instead of the full 2017–2025 range. This made it easier for the AI to apply RAG effectively, pulling relevant information while staying within token limits. Previously, I often saw either 'no information available' with too few records or 'Error: Exceed Token Limit' with the larger dataset. By understanding these limitations, I’ve become more mindful about the dataset scope I use, ensuring the chatbot remains efficient and genuinely helpful."
 
+I've include WordDoc 'Prompts and Responses that clearly demonstrate the use of RAG in Resale HDBuddy chatbot' in GitHub for reference.
+
 User Impact
 
 For a non technical user, the impact is clear:  
